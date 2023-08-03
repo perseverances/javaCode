@@ -1,9 +1,9 @@
-package SomeCode;
+package someCode.oneHundredPrint;
 
-public class facade {
+public class OneHundredPrint {
 
     /**
-     * 使用2个线程轮流打印 0-100数字
+     * 使用2个线程轮流打印 1-100数字
      */
     private static final Object lock = new Object();
     private static Integer i = 1;
@@ -11,10 +11,10 @@ public class facade {
 
     public static void main(String[] args) {
         Thread thread1 = new Thread(() -> {
-            while (true) {
+            while (i <= MAX_NUM) {
                 synchronized (lock) {
                     if (i % 2 == 1) {
-                        System.out.println(i);
+                        System.out.println(Thread.currentThread().getName() + ": " + i);
                         i++;
                         //唤醒等待的线程
                         lock.notify();
@@ -29,14 +29,14 @@ public class facade {
                 }
             }
 
-        });
+        }, "Thread-JI");
 
 
         Thread thread2 = new Thread(() -> {
-            while (true) {
+            while (i <= MAX_NUM) {
                 synchronized (lock) {
                     if (i % 2 == 0) {
-                        System.out.println(i);
+                        System.out.println(Thread.currentThread().getName() + ": " + i);
                         i++;
                         lock.notify();
                     } else {
@@ -49,7 +49,7 @@ public class facade {
                 }
             }
 
-        });
+        }, "Thread-OU");
 
         thread1.start();
         thread2.start();
