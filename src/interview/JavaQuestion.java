@@ -31,5 +31,12 @@ public class JavaQuestion {
     //特点：不遵循SQL的标准，不支持ACID（事务的四个特效，原子、一致、持久、隔离）、远超SQL的性能
     //使用场景：（用不着SQL、用了SQL也解决不了）高并发读写、海量数据读写（高可扩展性）      -----秒杀场景
     //不适用场景：事务的支持、结构化存储（复杂的关系）
-    //常见的NoSQL数据库：MemCache（不能持久化）、Redis（支持持久化、除了String支持各种数据类型）、MongoDB（文档型数据库，类JSON）
+    //常见的NoSQL数据库：MemCache（不能持久化）、Redis（支持持久化、除了String支持各种数据类型）、MongoDB（文档型数据库，类JSON）、HBase
+
+
+
+
+
+    //Redis安装：开源的key-value数据库
+    //存储时效性数据很方便：短信验证码
 }
