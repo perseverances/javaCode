@@ -61,6 +61,36 @@ public class JavaQuestion {
 
 
     //Redsi中常用的数据类型：
+    //Redis中的当前库操作命令：
+    //          设置key：set （key） （value）
+    //          获取所有的key：keys *
+    //          获取key的类型：type （key）
+    //          查询key的时间：ttl （key）
+    //          ····等
+    //          查看当前库key的数量：dbsize
+
+
+
+
+
+
+    //Redsi中常用的数据类型：String
+    //常用，二进制安全的(视频图片都可以存储)，value最大512M
+    //命令：     设置值：set（重复设置值，会覆盖）
+    //          取值：get
+    //          追加：append
+    //          设置值：setnx（有值设置失败，无值设置成功）
+    //redis原子操作：线程之间不会被打断（多线程则无法保证）。 incr是原子操作
+    // Java中的i++不是原子操作（三步：取值、加1、赋值）     --可能结果：2~200
+
+
+
+
+
+
+    //Redsi中常用的数据类型：String
+    // mset、mget、msetnx
+    //String底层数据接口：简单的动态字符串，类似于ArrayList
 
 
 
