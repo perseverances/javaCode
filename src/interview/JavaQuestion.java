@@ -9,6 +9,7 @@ package interview;
 public class JavaQuestion {
 
     /**
+     * 尚硅谷课程
      * redis相关问题    ----    redsi 6之后的版本
      */
     //redis的5大基本数据类型、4种新类型
@@ -37,6 +38,30 @@ public class JavaQuestion {
 
 
 
-    //Redis安装：开源的key-value数据库
-    //存储时效性数据很方便：短信验证码
+    //Redis安装：开源的key-value的存储系统
+    //Redis支持各种方式的排序
+    //存储时效性数据很方便：短信验证码；计数器、秒杀       --  大量数据的去重数据
+    //官网下载，Linux系统中安装：上传压缩包，要有c语言的环境（Gcc环境即可）       tar -zxvf解压
+    //Redis启动：前台启动 redis -server
+    //          后台启动  进入opt目录，赋值并修改conf配置文件（配置文件中开启后台启动命令，设为yes）    redis -server /etc/redis.conf
+    //          redis -cli,进入命令行操作
+
+
+
+
+
+
+    //Redis的6379端口（端口号来源：MERZ）、单线程+多路IO复用技术
+    //Redis中默认16个数据库：默认0号库，select 1进入1号库
+    //单线程+多路IO复用技术：例子，黄牛买票（黄牛--单线程，多个买票人：买到票来取，买不到去做自己的事情）
+
+
+
+
+
+
+    //Redsi中常用的数据类型：
+
+
+
 }
